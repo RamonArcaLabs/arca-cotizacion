@@ -1,0 +1,78 @@
+<odoo>
+    <template id="custom_quotation_template">
+        <t t-call="web.html_container">
+            <t t-call="web.basic_layout">
+                <t t-foreach="docs" t-as="doc">
+                    <div style="color: #085294; margin-left: 5em; margin-right: 4em; line-height: 2; font-family: sans-serif">
+                        <div class="page" style="font-size: 18px;">
+
+                            <div style="margin-bottom: -70px;" class="text-center">
+                                <span t-field="doc.arca_title">Cotización Odoo Title</span> <br/><br/>
+                            </div>
+
+                            <div class="d-flex justify-content-end align-items-start">
+                                <img height="180px" src="/my_custom_quotation/static/img/odoo_logo.png"/>
+                            </div>
+                            
+                            <div class="d-flex" style="color: #085294; line-height: 1; margin-top: -115px;">
+                                <div style="text-align: left; width: 50%;">
+                                    <span>ARK SOFTWARE S DE RL DE CV</span> <br/>
+                                    <span>ASO-210617-3E7</span> <br/>
+                                    <span>Ave. Homero 1800, Colonia Paseos de Chihuahua</span> <br/>
+                                    <span>C.P. 31125, Chihuahua, Chih.</span> <br/> <br/>
+                                </div>
+                            </div>
+
+
+                            <span t-if="doc.partner_id.parent_id" t-field="doc.partner_id.parent_id.name"></span> <br/>
+
+                            <span t-field="doc.partner_id.name" ></span> <br/>
+                            <span t-field="doc.partner_id.function">Director</span>
+                            <br/> <br/>
+
+                            <strong><p style="text-indent: 2em;">1. Introducción</p></strong>
+                            <p t-field="doc.arca_introduccion"></p> <br/>
+
+                            <p style="text-indent: 2em;">2. Alcance del Proyecto</p>
+                            <p t-field="doc.arca_alcance_del_proyecto"></p> <br/>
+                            
+                            <p style="text-indent: 2em;">3. Alcance Organizacional</p>
+                            <p t-field="doc.arca_alcance_organizacional"></p> <br/>
+
+                            <p style="text-indent: 2em;">4. Metodología</p>
+                            <p t-field="doc.arca_metodologia"></p> <br/>
+
+                            <p style="text-indent: 2em;">5. Alcance Técnico y fases (Cronograma)</p>
+                            <p t-field="doc.arca_alcance_tecnico_y_fases"></p> <br/>
+
+
+                        </div>
+                        
+                        <div style="page-break-after: always;"></div>
+
+                        <div style="font-size: 18px;">
+                            <p style="text-indent: 2em;">6. Inversión</p>
+                        </div>
+
+                        <t t-call="my_custom_quotation.products_template" />
+
+                        <br/><br/>
+                        <strong><p>Condiciones Generales y Términos</p></strong>
+                        <p t-field="doc.arca_condiciones_generales_y_terminos"></p> <br/><br/><br/><br/>
+
+                        <p>Estamos entusiasmados de la oportunidad de colaborar con ustedes y apoyar en la transformación digital de su empresa.<br/>
+                        Para cualquier duda o aclaración, no duden en contactarme.</p><br/>
+
+                        <strong><p>¡Gracias por la oportunidad!</p></strong> <br/><br/>
+                        <div class="text-center">
+                            <strong><span>LUZ MARIA VALENZUELA ALARCÓN</span></strong><br/>
+                            <span>Desarrollo de Negocios</span><br/>
+                            <span>Cel: 614 2566465</span><br/>
+                            <span>Correo: luzmaria.valenzuela@arcalabs.com.mx</span>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

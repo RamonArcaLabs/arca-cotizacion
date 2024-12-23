@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_sale_order_form_inherit_sections" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.sections</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+                <page string="Secciones Arca" name="quotation_sections">
+                    <group name="quotation_group">
+                        <group name="quotation_group_left">
+                            <field name="arca_introduccion"/>
+                            <field name="arca_alcance_del_proyecto"/>
+                            <field name="arca_alcance_organizacional"/>
+                        </group>
+                        <group name="quotation_group_right">
+                            <field name="arca_metodologia"/>
+                            <field name="arca_alcance_tecnico_y_fases"/>
+                            <field name="arca_condiciones_generales_y_terminos"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
