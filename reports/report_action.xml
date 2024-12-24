@@ -3,7 +3,7 @@
         <field name="name">Cotización Arca</field>
         <field name="model">sale.order</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">my_custom_quotation.custom_quotation_template</field>
-        <field name="report_file">my_custom_quotation.custom_quotation_template</field>
+        <field name="report_name">arca_cotizacion.custom_quotation_template</field>
+        <field name="report_file">arca_cotizacion.custom_quotation_template</field>
     </record>
 </odoo>
