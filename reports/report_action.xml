@@ -5,5 +5,6 @@
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">arca_cotizacion.custom_quotation_template</field>
         <field name="report_file">arca_cotizacion.custom_quotation_template</field>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
     </record>
 </odoo>
