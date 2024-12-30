@@ -1,0 +1,9 @@
+<odoo>
+    <record id="arca_cotizacion_automation" model="base.automation">
+        <field name="name">Ejecutar Acción ArcaLabs</field>
+        <field name="model_id" ref="model_sale_order"/>
+        <field name="trigger">on_create_or_write</field>
+        <field name="trigger_field_ids" eval="[(6, 0, [5579])]" />
+        <field name="action_server_ids" eval="[(6, 0, [ref('arca_cotizacion_action_server')])]"/> 
+    </record>
+</odoo>

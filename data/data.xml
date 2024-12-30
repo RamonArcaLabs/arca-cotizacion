@@ -1,0 +1,29 @@
+<odoo>
+    <record id="sale_order_template_1" model="sale.order.template">
+        <field name="name">Cotización ArcaLabs</field>
+        <field name="arca_introduccion">Introducción</field>
+        <field name="arca_alcance_del_proyecto">Alcance del Proyecto</field>
+        <field name="arca_alcance_organizacional">Alcance Organizacional</field>
+        <field name="arca_metodologia">Metodología</field>
+        <field name="arca_alcance_tecnico_y_fases">Alcance Técnico y Fases</field>
+        <field name="arca_condiciones_generales_y_terminos">Condiciones Generales y Términos</field>
+    </record>
+    
+    <record id="arca_cotizacion_action_server" model="ir.actions.server">
+        <field name="name">Actualizar Campos ArcaLabs</field>
+        <field name="model_id" ref="model_sale_order"/>
+        <field name="state">code</field>
+        <field name="code">
+# Comprobamos que el campo sale_order_template_id no sea vacío
+if record.sale_order_template_id:
+    record.write({
+        'arca_introduccion': record.sale_order_template_id.arca_introduccion,
+        'arca_alcance_del_proyecto': record.sale_order_template_id.arca_alcance_del_proyecto,
+        'arca_alcance_organizacional': record.sale_order_template_id.arca_alcance_organizacional,
+        'arca_metodologia': record.sale_order_template_id.arca_metodologia,
+        'arca_alcance_tecnico_y_fases': record.sale_order_template_id.arca_alcance_tecnico_y_fases,
+        'arca_condiciones_generales_y_terminos': record.sale_order_template_id.arca_condiciones_generales_y_terminos,
+    })
+        </field>
+    </record>
+</odoo>

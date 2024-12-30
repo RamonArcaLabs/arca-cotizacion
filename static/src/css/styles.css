@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Oblivian Text';
+    src: url('/arca_cotizacion/static/src/fonts/OblivianText.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.text {
+    color: #1c5e82;
+    margin-left: 4em;
+    margin-right: 3em;
+    line-height: 2;
+    font-family: 'Oblivian Text';
+}

@@ -6,7 +6,7 @@
             <t t-set="display_discount" t-value="any(l.discount for l in lines_to_report)"/>
             <div class="oe_structure"/>
 
-            <table class="table table-sm o_main_table mt-4" style="color: #085294;">
+            <table class="table table-sm o_main_table mt-4" style="color: #1c5e82;">
                 <!-- In case we want to repeat the header, remove "display: table-row-group" -->
                 <thead style="display: table-row-group">
                     <tr>
@@ -35,10 +35,10 @@
                                 <td name="td_unit" class="text-center">
                                     <span t-field="line.product_uom">units</span>
                                 </td>
-                                <td name="td_concept" class="text-center">
+                                <td name="td_concept" class="text-start">
                                     <span t-field="line.arca_concept">Concepto</span>
                                 </td>
-                                <td t-if="not line.is_downpayment" name="td_subtotal" class="text-center o_price_total">
+                                <td t-if="not line.is_downpayment" name="td_subtotal" class="text-end o_price_total">
                                     <span t-field="line.price_subtotal">27.00</span>
                                 </td>
                             </t>
@@ -65,41 +65,43 @@
                     </t>
                 </tbody>
             </table>
-            <div class="clearfix" name="so_total_summary">
-                <div id="total" class="row" name="total">
-                    <div t-attf-class="#{'col-6' if report_type != 'html' else 'col-sm-7 col-md-6'} ms-auto">
-                        <table class="table table-sm table-borderless" style="color: #085294;">
-                            <!-- Tax totals -->
+            <div class="clearfix d-none" name="so_total_summary" style="color: #1c5e82;">
+                <div id="total" class="row" name="total" style="color: #1c5e82;">
+                    <div t-attf-class="#{'col-6' if report_type != 'html' else 'col-sm-7 col-md-6'} ms-auto" style="color: #1c5e82;">
+                        <table class="table table-sm table-borderless" style="color: #1c5e82;">
+
                             <t t-set="tax_totals" t-value="doc.tax_totals"/>
                             <t t-call="sale.document_tax_totals"/>
                         </table>
                     </div>
                 </div>
             </div>
-            <div class="oe_structure"/>
-            <div t-if="not doc.signature" class="oe_structure"/>
-            <div t-else="" class="mt-4 ml64 mr4" name="signature">
-                <div class="offset-8">
-                    <strong>Signature</strong>
-                </div>
-                <div class="offset-8">
-                    <img t-att-src="image_data_uri(doc.signature)" style="max-height: 4cm; max-width: 8cm;"/>
-                </div>
-                <div class="offset-8 text-center">
-                    <span t-field="doc.signed_by">Oscar Morgan</span>
-                </div>
-            </div>
-            <div>
-                <span t-field="doc.note" t-attf-style="#{'text-align:justify;text-justify:inter-word;' if doc.company_id.terms_type != 'html' else ''}" name="order_note"/>
-                <p t-if="not is_html_empty(doc.payment_term_id.note)">
-                    <span t-field="doc.payment_term_id.note">The payment should also be transmitted with love</span>
-                </p>
-                <div class="oe_structure"/>
-                <p t-if="doc.fiscal_position_id and not is_html_empty(doc.fiscal_position_id.sudo().note)" id="fiscal_position_remark">
-                    <strong>Fiscal Position Remark:</strong>
-                    <span t-field="doc.fiscal_position_id.sudo().note">No further requirements for this payment</span>
-                </p>
-            </div>
+            <table width="100%">
+                <t t-foreach="tax_totals['subtotals']" t-as="subtotal">
+                    <tr>
+                        <td class="text-end fw-bold" width="70%">
+                            <span t-out="subtotal['name']"><strong>Subtotal</strong></span>
+                        </td>
+                        <td class="text-end" width="30%">
+                            <span t-out="subtotal['formatted_amount']">27.00</span>
+                        </td>
+                    </tr>
+                </t>
+                <tr>
+                    <td class="text-end fw-bold" width="70%"><strong>IVA 16%</strong></td>
+                    <td class="text-end" width="30%">
+                        <span class="iva-cell" t-out="'$' + '{:,.2f}'.format(subtotal['amount'] * 0.16)">0.00</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-end fw-bold" width="70%">
+                        Total
+                    </td>
+                    <td class="text-end" width="30%">
+                        <span t-out="tax_totals['formatted_amount_total']">31.05</span>
+                    </td>
+                </tr>
+            </table>
 
         </div>
     </template>

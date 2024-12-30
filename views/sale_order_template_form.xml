@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <record id="view_sale_order_form_inherit_sections" model="ir.ui.view">
-        <field name="name">sale.order.form.inherit.sections</field>
-        <field name="model">sale.order</field>
-        <field name="inherit_id" ref="sale.view_order_form"/>
+    <record id="view_sale_order_template_form_inherit_sections" model="ir.ui.view">
+        <field name="name">sale.order.template.form.inherit.sections</field>
+        <field name="model">sale.order.template</field>
+        <field name="inherit_id" ref="sale_management.sale_order_template_view_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+            <xpath expr="//notebook[@name='main_book']" position="inside">
                 <page string="Secciones Arca" name="quotation_sections">
                     <group name="quotation_group">
                         <field name="arca_introduccion"/>

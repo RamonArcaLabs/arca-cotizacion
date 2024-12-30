@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields
-from babel.dates import format_date
 
-class SaleOrder(models.Model):
-    _inherit = "sale.order"
+class SaleOrderTemplate(models.Model):
+    _inherit = "sale.order.template"
 
     arca_introduccion = fields.Html(string='Introducción')
     arca_alcance_del_proyecto = fields.Html(string='Alcance del Proyecto')
@@ -12,9 +11,4 @@ class SaleOrder(models.Model):
     arca_metodologia = fields.Html(string='Metodología')
     arca_alcance_tecnico_y_fases = fields.Html(string='Alcance Técnico y Fases')
     arca_condiciones_generales_y_terminos = fields.Html(string='Condiciones Generales y Términos')
-    arca_title = fields.Char(string="Título Cotización")
 
-    def get_date_in_words(self, date):
-        if date:
-            return format_date(date, format='long', locale='es_ES')
-        return ""

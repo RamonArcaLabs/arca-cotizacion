@@ -3,19 +3,20 @@
         <t t-call="web.html_container">
             <t t-call="web.basic_layout">
                 <t t-foreach="docs" t-as="doc">
-                    <div style="color: #085294; margin-left: 5em; margin-right: 4em; line-height: 2; font-family: sans-serif">
-                        <div class="page" style="font-size: 18px;">
+                    <link rel="stylesheet" type="text/css" href="/arca_cotizacion/static/src/css/styles.css"/>
+                    <div class="text">
+                        <div class="page" style="font-size: 17.5px;">
 
                             <div style="margin-bottom: -50px;" class="text-center">
-                                <span t-field="doc.arca_title">Cotización Odoo Title</span> <br/><br/>
+                                <strong><span t-field="doc.arca_title">Cotización Odoo Title</span></strong> <br/>
                             </div>
 
                             <div class="d-flex justify-content-end align-items-start">
-                                <img height="180px" src="/arca_cotizacion/static/img/odoo_logo.png"/>
+                                <img height="180px" width="280px" src="/arca_cotizacion/static/img/odoo_logo.png"/>
                             </div>
                             
-                            <div class="d-flex" style="color: #085294; line-height: 1; margin-top: -115px;">
-                                <div style="text-align: left; width: 50%;">
+                            <div class="d-flex" style="line-height: 0; margin-top: -115px; font-size: 16px;">
+                                <div style="text-align: left; width: 65%;">
                                     <span>ARK SOFTWARE S DE RL DE CV</span> <br/>
                                     <span>ASO-210617-3E7</span> <br/>
                                     <span>Ave. Homero 1800, Colonia Paseos de Chihuahua</span> <br/>
@@ -24,14 +25,17 @@
                             </div>
 
                             <div class="d-flex justify-content-end">
-                                <p class="ms-auto" t-field="doc.validity_date"></p>
+                                <span t-esc="doc.get_date_in_words(doc.date_order)"/> <br/>
+                                <span style="font-size: 26px; font-weight: bold;" t-field="doc.name"></span>
                             </div>
 
-                            <strong><span t-if="doc.partner_id.parent_id" t-field="doc.partner_id.parent_id.name"></span></strong> <br/>
 
-                            <strong><span t-field="doc.partner_id.name" ></span></strong> <br/>
-                            <strong><span t-field="doc.partner_id.function">Director</span></strong>
-                            <br/> <br/>
+                            <div style="line-height: 0;">
+                                <strong><span t-if="doc.partner_id.parent_id" t-field="doc.partner_id.parent_id.name"></span></strong> <br/>
+                                <strong><span t-field="doc.partner_id.name" ></span></strong> <br/>
+                                <strong><span t-field="doc.partner_id.function">Director</span></strong>
+                            </div>
+                            <br/>
 
                             <strong><p style="text-indent: 2em;">1. Introducción</p></strong>
                             <p t-field="doc.arca_introduccion"></p> <br/>
@@ -72,8 +76,9 @@
                             <strong><span>LUZ MARIA VALENZUELA ALARCÓN</span></strong><br/>
                             <span>Desarrollo de Negocios</span><br/>
                             <span>Cel: 614 2566465</span><br/>
+                            <span>Correo: </span>
                             <a href="mailto:luzmaria.valenzuela@arcalabs.com.mx">
-                                <span>Correo: luzmaria.valenzuela@arcalabs.com.mx</span>
+                                <span>luzmaria.valenzuela@arcalabs.com.mx</span>
                             </a>
                         </div>
                     </div>
