@@ -5,6 +5,7 @@
     'category': 'Sales',
     'depends': ['sale', 'base', 'sale_management'],
     'data': [
+        'security/ir.model.access.csv',
         'views/sale_order_views.xml',
         'views/sale_order_form.xml',
         'views/sale_order_lines.xml',

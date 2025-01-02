@@ -1,1 +1,1 @@
-from . import sale_order, sale_order_line, sale_order_template
+from . import sale_order, sale_order_line, sale_order_template, quotation_img_options

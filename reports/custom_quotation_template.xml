@@ -11,8 +11,8 @@
                                 <strong><span t-field="doc.arca_title">Cotización Odoo Title</span></strong> <br/>
                             </div>
 
-                            <div class="d-flex justify-content-end align-items-start">
-                                <img height="180px" width="280px" src="/arca_cotizacion/static/img/odoo_logo.png"/>
+                            <div class="d-flex justify-content-end align-items-end" style="padding: 50px;">
+                                <img height="70px" t-att-src="image_data_uri(doc.arca_imagen.image)"/>
                             </div>
                             
                             <div class="d-flex" style="line-height: 0; margin-top: -115px; font-size: 16px;">
@@ -24,7 +24,7 @@
                                 </div>
                             </div>
 
-                            <div class="d-flex justify-content-end">
+                            <div class="d-flex justify-content-end" style="margin-top: 15px;">
                                 <span t-esc="doc.get_date_in_words(doc.date_order)"/> <br/>
                                 <span style="font-size: 26px; font-weight: bold;" t-field="doc.name"></span>
                             </div>

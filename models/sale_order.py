@@ -13,6 +13,7 @@ class SaleOrder(models.Model):
     arca_alcance_tecnico_y_fases = fields.Html(string='Alcance Técnico y Fases')
     arca_condiciones_generales_y_terminos = fields.Html(string='Condiciones Generales y Términos')
     arca_title = fields.Char(string="Título Cotización")
+    arca_imagen = fields.Many2one('quotation.img.options', string='Imagen')
 
     def get_date_in_words(self, date):
         if date:
