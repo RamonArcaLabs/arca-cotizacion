@@ -1,22 +1,23 @@
 <odoo>
     <template id="custom_quotation_template">
         <t t-call="web.html_container">
-            <t t-call="web.basic_layout">
-                <t t-foreach="docs" t-as="doc">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.basic_layout" t-lang="doc.partner_id.lang">
                     <link rel="stylesheet" type="text/css" href="/arca_cotizacion/static/src/css/styles.css"/>
                     <div class="text">
                         <div class="page" style="font-size: 17.5px;">
 
-                            <div style="margin-bottom: -50px;" class="text-center">
+                            <div style="margin-bottom: -30px;" class="text-center">
                                 <strong><span t-field="doc.arca_title">Cotización Odoo Title</span></strong> <br/>
                             </div>
 
                             <div class="d-flex justify-content-end align-items-end" style="padding: 50px;">
-                                <img height="70px" t-att-src="image_data_uri(doc.arca_imagen.image)"/>
+                                <img height="70px" t-if="doc.arca_imagen" t-att-src="image_data_uri(doc.arca_imagen.image)"/>
                             </div>
                             
                             <div class="d-flex" style="line-height: 0; margin-top: -115px; font-size: 16px;">
                                 <div style="text-align: left; width: 65%;">
+                                    <span>ARCA LABS</span> <br/>
                                     <span>ARK SOFTWARE S DE RL DE CV</span> <br/>
                                     <span>ASO-210617-3E7</span> <br/>
                                     <span>Ave. Homero 1800, Colonia Paseos de Chihuahua</span> <br/>
@@ -33,10 +34,10 @@
                             <div style="line-height: 0;">
                                 <strong><span t-if="doc.partner_id.parent_id" t-field="doc.partner_id.parent_id.name"></span></strong> <br/>
                                 <strong><span t-field="doc.partner_id.name" ></span></strong> <br/>
-                                <strong><span t-field="doc.partner_id.function">Director</span></strong>
+                                <strong><span t-field="doc.partner_id.function"></span></strong>
                             </div>
                             <br/>
-
+                            
                             <strong><p style="text-indent: 2em;">1. Introducción</p></strong>
                             <p t-field="doc.arca_introduccion"></p> <br/>
 
@@ -57,29 +58,29 @@
                         
                         <div style="page-break-after: always;"></div>
 
-                        <div style="font-size: 18px;">
+                        <div style="font-size: 14px; line-height: 1.4;">
                             <strong><p style="text-indent: 2em;">6. Inversión</p></strong>
-                        </div>
 
-                        <t t-call="arca_cotizacion.products_template" />
+                            <t t-call="arca_cotizacion.products_template" t-lang="doc.partner_id.lang"/>
 
-                        <br/><br/>
-                        <strong><p>Condiciones Generales y Términos</p></strong>
-                        <p t-field="doc.arca_condiciones_generales_y_terminos"></p> <br/><br/><br/><br/>
+                            <br/><br/>
+                            <strong><p>Condiciones Generales y Términos</p></strong>
+                            <p t-field="doc.arca_condiciones_generales_y_terminos"></p> <br/><br/><br/><br/>
 
-                        <p>Estamos entusiasmados de la oportunidad de colaborar con ustedes y apoyar en la transformación digital de su empresa.<br/>
-                        Para cualquier duda o aclaración, no duden en contactarme.</p><br/>
+                            <p>Estamos entusiasmados de la oportunidad de colaborar con ustedes y apoyar en la transformación digital de su empresa.<br/>
+                            Para cualquier duda o aclaración, no duden en contactarme.</p><br/>
 
-                        <strong><p>¡Gracias por la oportunidad!</p></strong> <br/><br/>
-                        <div class="text-center">
-                            <img height="60px" src="/arca_cotizacion/static/img/firma-lucy.png"/><br/>
-                            <strong><span>LUZ MARIA VALENZUELA ALARCÓN</span></strong><br/>
-                            <span>Desarrollo de Negocios</span><br/>
-                            <span>Cel: 614 2566465</span><br/>
-                            <span>Correo: </span>
-                            <a href="mailto:luzmaria.valenzuela@arcalabs.com.mx">
-                                <span>luzmaria.valenzuela@arcalabs.com.mx</span>
-                            </a>
+                            <strong><p>¡Gracias por la oportunidad!</p></strong> <br/><br/>
+                            <div class="text-center">
+                                <img height="60px" src="/arca_cotizacion/static/img/firma-lucy.png"/><br/>
+                                <strong><span>LUZ MARIA VALENZUELA ALARCÓN</span></strong><br/>
+                                <span>Desarrollo de Negocios</span><br/>
+                                <span>Cel: 614 2566465</span><br/>
+                                <span>Correo: </span>
+                                <a href="mailto:luzmaria.valenzuela@arcalabs.com.mx">
+                                    <span>luzmaria.valenzuela@arcalabs.com.mx</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </t>

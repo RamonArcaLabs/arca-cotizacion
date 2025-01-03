@@ -3,7 +3,7 @@
     'version': '1.0',
     'author': 'Ramon Reyna',
     'category': 'Sales',
-    'depends': ['sale', 'base', 'sale_management'],
+    'depends': ['sale', 'base', 'sale_management', 'base_automation'],
     'data': [
         'security/ir.model.access.csv',
         'views/sale_order_views.xml',

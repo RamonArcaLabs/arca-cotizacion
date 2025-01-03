@@ -1,0 +1,284 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* arca_cotizacion
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e-20241119\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-03 19:45+0000\n"
+"PO-Revision-Date: 2025-01-03 13:55-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.products_template
+msgid "0.00"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.custom_quotation_template
+msgid "1. Introducción"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.custom_quotation_template
+msgid "2. Alcance del Proyecto"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.products_template
+msgid "27.00"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.custom_quotation_template
+msgid "3. Alcance Organizacional"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.products_template
+msgid "31.05"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.custom_quotation_template
+msgid "4. Metodología"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.custom_quotation_template
+msgid "5. Alcance Técnico y fases (Cronograma)"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.custom_quotation_template
+msgid "6. Inversión"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.custom_quotation_template
+msgid ""
+"<br/>\n"
+"                                <strong><span>LUZ MARIA VALENZUELA ALARCÓN</span></strong><br/>\n"
+"                                <span>Desarrollo de Negocios</span><br/>\n"
+"                                <span>Cel: 614 2566465</span><br/>\n"
+"                                <span>Correo: </span>"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.custom_quotation_template
+msgid ""
+"<span>ARK SOFTWARE S DE RL DE CV</span> <br/>\n"
+"                                    <span>ASO-210617-3E7</span> <br/>\n"
+"                                    <span>Ave. Homero 1800, Colonia Paseos de Chihuahua</span> <br/>\n"
+"                                    <span>C.P. 31125, Chihuahua, Chih.</span> <br/> <br/>"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.products_template
+msgid "<span>Importe total</span>"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.custom_quotation_template
+msgid "<span>luzmaria.valenzuela@arcalabs.com.mx</span>"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.products_template
+msgid "<strong class=\"mr16\">Subtotal</strong>"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.products_template
+msgid "<strong>IVA 16%</strong>"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.products_template
+msgid "<strong>Subtotal</strong>"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.products_template
+msgid "A note, whose content usually applies to the section or product above."
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.products_template
+msgid "A section title"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model.fields,field_description:arca_cotizacion.field_sale_order__arca_alcance_organizacional
+#: model:ir.model.fields,field_description:arca_cotizacion.field_sale_order_template__arca_alcance_organizacional
+msgid "Alcance Organizacional"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model.fields,field_description:arca_cotizacion.field_sale_order__arca_alcance_tecnico_y_fases
+#: model:ir.model.fields,field_description:arca_cotizacion.field_sale_order_template__arca_alcance_tecnico_y_fases
+msgid "Alcance Técnico y Fases"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model.fields,field_description:arca_cotizacion.field_sale_order__arca_alcance_del_proyecto
+#: model:ir.model.fields,field_description:arca_cotizacion.field_sale_order_template__arca_alcance_del_proyecto
+msgid "Alcance del Proyecto"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model,name:arca_cotizacion.model_quotation_img_options
+msgid "Arca Quotation Img Options"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.products_template
+msgid "Cantidad"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model.fields,field_description:arca_cotizacion.field_sale_order_line__arca_concept
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.products_template
+msgid "Concepto"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model.fields,field_description:arca_cotizacion.field_sale_order__arca_condiciones_generales_y_terminos
+#: model:ir.model.fields,field_description:arca_cotizacion.field_sale_order_template__arca_condiciones_generales_y_terminos
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.custom_quotation_template
+msgid "Condiciones Generales y Términos"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.actions.report,name:arca_cotizacion.action_report_custom_quotation
+msgid "Cotización Arca"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.custom_quotation_template
+msgid "Cotización Odoo Title"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model.fields,field_description:arca_cotizacion.field_quotation_img_options__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model.fields,field_description:arca_cotizacion.field_quotation_img_options__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model.fields,field_description:arca_cotizacion.field_quotation_img_options__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:base.automation,name:arca_cotizacion.arca_cotizacion_automation
+msgid "Ejecutar Acción ArcaLabs"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.custom_quotation_template
+msgid ""
+"Estamos entusiasmados de la oportunidad de colaborar con ustedes y apoyar en la transformación digital de su empresa.<br/>\n"
+"                            Para cualquier duda o aclaración, no duden en contactarme."
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.actions.server,name:arca_cotizacion.arca_cotizacion_action_server
+msgid "Execute Code"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model.fields,field_description:arca_cotizacion.field_quotation_img_options__id
+msgid "ID"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model.fields,field_description:arca_cotizacion.field_quotation_img_options__image
+#: model:ir.model.fields,field_description:arca_cotizacion.field_sale_order__arca_imagen
+msgid "Imagen"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model.fields,field_description:arca_cotizacion.field_sale_order__arca_introduccion
+#: model:ir.model.fields,field_description:arca_cotizacion.field_sale_order_template__arca_introduccion
+msgid "Introducción"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model.fields,field_description:arca_cotizacion.field_quotation_img_options__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model.fields,field_description:arca_cotizacion.field_quotation_img_options__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model.fields,field_description:arca_cotizacion.field_sale_order__arca_metodologia
+#: model:ir.model.fields,field_description:arca_cotizacion.field_sale_order_template__arca_metodologia
+msgid "Metodología"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model.fields,field_description:arca_cotizacion.field_quotation_img_options__name
+msgid "Nombre"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model,name:arca_cotizacion.model_sale_order_template
+msgid "Quotation Template"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model,name:arca_cotizacion.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model,name:arca_cotizacion.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.view_sale_order_form_inherit_sections
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.view_sale_order_template_form_inherit_sections
+msgid "Secciones Arca"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.products_template
+msgid "Total"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model:ir.model.fields,field_description:arca_cotizacion.field_sale_order__arca_title
+msgid "Título Cotización"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.products_template
+msgid "Unidad de medida"
+msgstr "Units"
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.products_template
+msgid "units"
+msgstr ""
+
+#. module: arca_cotizacion
+#: model_terms:ir.ui.view,arch_db:arca_cotizacion.custom_quotation_template
+msgid "¡Gracias por la oportunidad!"
+msgstr ""
